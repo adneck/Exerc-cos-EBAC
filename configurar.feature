@@ -1,31 +1,33 @@
-#language: pt 
+            #language: pt
 
-Funcionalidade: configuracao de produto
-Como cliente da EBAC Shop  
-Quero escolher meu produto de acordo com meu tamanho
-Escolher a quantidade
-E inserir no carrinho
+            Funcionalidade: Configurar produto
+            Como cliente da EBAC-Shop
+            Quero escolher meu produto de acordo com meu tamanho e escolha
+            E escolher a quantidade
+            Para inserir no carrinho de compra
 
-Contexto: 
-Ter a opção de escolher o tamanho, quantidade e cor
+            Contexto:
+            Dado que eu acesse o carrinho de compra da EBAC-SHOP
 
-Cenário: Escolha de produto
-Quando eu escolher o "tamanho", "quantidade" e a "cor"
-Então a compra deve ser exibida no carrinho e cinalizar a quantidade de itens.
+            Cenário: Seleção de produto
+            Quando eu escolher o tamanho "grande" e a cor "roxa"
+            E a quantidade "1"
+            Então deve inserir o produto no carrinho
 
-Cenário: Quantidade excedida    
-Quando a quantidade de intens exceder o maximo de 10
-Então deve ser exibida a mensagem "você excedeu a quantidade de itens"
+            Cenário: Seleção de opção
+            Quando o carrinho estiver cheio
+            E eu selecionar "limpar"
+            Então deve voltar a seleção de produto
 
-Cenário: Esvaziar o carrinho
-Quando eu selecionar os produtos 
-Então deve aparecer as opções "seguir com a compra" ou "esvaziar carrinho"
+            Cenário: Quantidade Inválida
+            Quando o carrinho passar da quantidade de 10 iténs
+            Então deve aparecer a mensagem de erro: Quantidade permitida execedida
 
-Esquema de Cenário: compra de produto
-Quando a <quantidade> <cor> <tamanho> forem inceridas no carrinho de compra
-Então deve exibir a seguinte <mensagem>
+            Esquema de Cenário: Opções Inválidas
+            Quando eu inseriri <produto> a <cor> e o <tamanho>
+            E selecionar a <quantidade>
+            Então deve exibri a seguinte <mensagem> de erro
 
-Exmplos:
-|produto|quantidade|mensagem|
-|"camisa"|"1"|"seguir com a compra"|
-|"calça"|"2"|"seguir com a compra"|
+            Exmplos:
+            | produto    | cor     | tamanho  | quantidade | mensagem                         |
+            | "camiseta" | "verde" | "grande" | "11"       | "Quantidade permitida excedida!" |
