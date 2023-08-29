@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro html</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    h1{
+        background-color: rgb(43, 220, 226);
+    }
+</style>
+
+<body id="wrap">
+    <body id="body">
+   <div>
+    <head>
+        <h1> Cidade de Minas Gerais</h1>
+        
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.tripadvisor.com.br/SmartDeals-g303370-State_of_Minas_Gerais-Hotel-Deals.html"  target="blank"> Hospedagem </a></li>
+                <li><a href="https://www.pirangucu.mg.gov.br/portal/servicos/1001/sobre-a-cidade/"  target="blank"> Serviços </a></li>
+                <li><a href="https://www.minasgerais.com.br/pt/blog/artigo/top-10-cachoeiras-de-minas-gerais"  target="blank"> Turismo </a></li>
+                <img src="./imagem/chalé.jpg" alt="Imagem de chalé">
+        </nav>
+    </head>
+    
+   </div> 
+   <div>
+
+</div>
+   <form action="">
+    <label for="nome">Digite seu nome</label>
+    <input type="text" name="nome" id="nome">
+    <label for="email">Digite seu email:</label>
+    <input type="email" name="email" id="email">
+    <input type="submit" value="Enviar">
+   </form>
+</body>
+</html>
